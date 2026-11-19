@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAPS STORE | Gorras exclusivas</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #090909;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      padding: 22px;
+      text-align: center;
+      border-bottom: 1px solid #9b7936;
+    }
+    .logo {
+      color: #d9b66b;
+      font-size: 27px;
+      font-weight: bold;
+      letter-spacing: 4px;
+    }
+    nav { margin-top: 16px; }
+    nav a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+    }
+    .hero {
+      padding: 85px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #222, #050505);
+    }
+    .hero h1 {
+      font-size: clamp(32px, 7vw, 58px);
+      margin: 0 0 18px;
+    }
+    .gold { color: #d9b66b; }
+    .hero p { color: #ccc; }
+    .btn {
+      display: inline-block;
+      padding: 14px 23px;
+      margin-top: 15px;
+      background: #cba45b;
+      color: #111;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    section { padding: 55px 20px; }
+    h2 { text-align: center; margin-bottom: 35px; }
+    .catalogo {
+      max-width: 1050px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 24px;
+    }
+    .producto {
+      background: #191919;
+      border: 1px solid #3b3325;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+    .gorra {
+      font-size: 95px;
+      background: #252525;
+      padding: 30px;
+      border-radius: 9px;
+    }
+    .producto h3 { color: #e1bf79; }
+    .producto p { color: #bbb; }
+    .contacto { text-align: center; background: #141414; }
+    footer {
+      padding: 24px;
+      text-align: center;
+      color: #999;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">CAPS STORE</div>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#catalogo">Gorras</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<div class="hero" id="inicio">
+  <h1>EL ESTILO <span class="gold">SE LLEVA PUESTO</span></h1>
+  <p>Gorras exclusivas. Actitud urbana. Estilo sin límites.</p>
+  <a class="btn" href="#catalogo">VER COLECCIÓN</a>
+</div>
+
+<section id="catalogo">
+  <h2>NUESTRA <span class="gold">COLECCIÓN</span></h2>
+  <div class="catalogo">
+
+    <div class="producto">
+      <div class="gorra">🧢</div>
+      <h3>BARBER GOLD</h3>
+      <p>Diseño negro y dorado</p>
+      <p>Precio: consultar</p>
+      <a class="btn" href="#" onclick="pedir('BARBER GOLD');return false;">
+        PEDIR POR WHATSAPP
+      </a>
+    </div>
+
+    <div class="producto">
+      <div class="gorra">🧢</div>
+      <h3>URBAN BLACK</h3>
+      <p>Estilo urbano premium</p>
+      <p>Precio: consultar</p>
+      <a class="btn" href="#" onclick="pedir('URBAN BLACK');return false;">
+        PEDIR POR WHATSAPP
+      </a>
+    </div>
+
+    <div class="producto">
+      <div class="gorra">🧢</div>
+      <h3>CLASSIC CAP</h3>
+      <p>Elegancia para cualquier ocasión</p>
+      <p>Precio: consultar</p>
+      <a class="btn" href="#" onclick="pedir('CLASSIC CAP');return false;">
+        PEDIR POR WHATSAPP
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="contacto" id="contacto">
+  <h2>¿TIENES ALGUNA <span class="gold">PREGUNTA?</span></h2>
+  <p>Escríbenos y te ayudamos a elegir tu gorra.</p>
+  <a class="btn" href="#" onclick="pedir('una gorra');return false;">
+    CONTACTAR POR WHATSAPP
+  </a>
+</section>
+
+<footer>
+  © 2026 CAPS STORE · Todos los derechos reservados
+</footer>
+
+<script>
+  // Sustituye este número por el WhatsApp de tu tienda.
+  const telefono = "34604938434";
+
+  function pedir(modelo) {
+    const mensaje = "Hola, estoy interesado en " + modelo +
+      ". ¿Me puedes dar más información?";
+    window.open(
+      "https://wa.me/" + telefono +
+      "?text=" + encodeURIComponent(mensaje),
+      "_blank"
+    );
+  }
+</script>
+
+</body>
+</html>
